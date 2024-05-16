@@ -52,14 +52,7 @@ curl -X 'POST' \
 
 
 Contribución
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-
-Haz un fork del repositorio.
-Crea una rama para tu nueva funcionalidad (git checkout -b feature/nueva-funcionalidad).
-Haz tus cambios y realiza commits describiendo tus modificaciones (git commit -am 'Agrega nueva funcionalidad').
-Haz push de tus cambios a tu repositorio (git push origin feature/nueva-funcionalidad).
-Abre un pull request en el repositorio original.
-
+(este proyecto es un examen, por lo cual no estan habilitadas contribuciones hasta luego de aprobar el mismo)
 
 Licencia
 Este proyecto está bajo la licencia MIT.
