@@ -11,13 +11,11 @@ from langchain_cohere import ChatCohere
 llm = ChatCohere()
 
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
-from langchain_core.documents import Document
 
 # Crear el cargador de documentos PDF
 loader = PyPDFLoader("./pdf/Dialnet-AplicacionDeLaTeoriaFundamentadaGroundedTheoryAlEs-2499458.pdf")
@@ -33,7 +31,14 @@ documents = text_splitter.split_documents(docs)
 vector = FAISS.from_documents(documents, embeddings)
 
 # Crear cadena de recuperación
-prompt = ChatPromptTemplate.from_template("""responde desde el context y di elemental mi querido watson en cada respuesta, diq ue no puedes responder a nada que no este relacionado con el contex:
+prompt = ChatPromptTemplate.from_template("""
+                                          1-nunca te presentes. 
+                                          2 - si alguien pregunta algo que no esta en el contex responde:" no puedo responder a eso por ahora, solo puedo responder sobre "  y completa la oracion hbalndo por arriba del contexto
+                                          3 - si se hace una pregunta que puedes responder... solo responde con la respuesta directamente, sin anda mas que la respuesta.
+                                          4 - si alquien dice hola solo  responde " Hola ¿En que puedo ayudarte?
+                                          5 - si alguien dice adios solo responde "Adios. Que tengas un buen dia"
+                                          6 - si alguien dice hola y una pregunta, responde "hola" y completa con al respuesta a la pregunta
+                                          7- si alguien pregunta " quien eres?" responde "Soy un asistente virtual creado por estudiantes de la UTN-FRSR del equipo UTN-MMXXIII, puedo ayudarte con tus dudas sobre " y completa con informacion del contexto
 <context>
 {context}
 </context>
