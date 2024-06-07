@@ -1,4 +1,4 @@
-# Chatbot
+# Chatbot 🤖
 ## Descripción
 Chatbot realizado por integrantes del Equipo UTN MMXXIII. El programa utiliza una API que permite la comunicación entre los requerimientos del usuario (desde el FrontEnd) y las respuestas del motor de Inteligencia Artificial utilizado (en el Backend).
 Asimismo, según el modelo de negocio planteado, la aplicación permite personalizar el nombre, icono y colores del chatbot y establecer información específica sobre la compañía como una temática específica (por ejemplo, seguros), o en el caso que se requiera horarios de atención, canales de comunicación, etc. Ésta información puede ser cargada mediante un documento PDF del negocio en el Backend y operar como contexto de trabajo de la IA. 
