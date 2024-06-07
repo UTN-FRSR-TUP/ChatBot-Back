@@ -18,7 +18,7 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 
 # Crear el cargador de documentos PDF
-loader = PyPDFLoader("./pdf/Dialnet-AplicacionDeLaTeoriaFundamentadaGroundedTheoryAlEs-2499458.pdf")
+loader = PyPDFLoader("./pdf/Centro-Tecnologico.pdf")
 docs = loader.load()
 
 # Proceso de embedding
